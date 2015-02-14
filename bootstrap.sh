@@ -5,7 +5,7 @@ apt-get install -y apt-file
 apt-file update
 
 # standard tools
-apt-get install -y tree flip vim git subversion curl wget openjdk-7-jdk
+apt-get install -y tree flip vim git subversion curl wget openjdk-7-jdk libcurl4-openssl-dev
 apt-get -y -f install
 
 # nodejs
@@ -33,4 +33,3 @@ dpkg -i google-chrome-*.deb
 apt-get install -y -f
 cd -
 
-apt-get -y -f install
