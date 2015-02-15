@@ -33,3 +33,13 @@ dpkg -i google-chrome-*.deb
 apt-get install -y -f
 cd -
 
+# ag
+apt-get install -y automake pkg-config libpcre3-dev zlib1g-dev liblzma-dev
+apt-get install -y -f
+wd=`pwd`
+cd /tmp
+git clone https://github.com/ggreer/the_silver_searcher
+cd the_silver_searcher
+./build.sh
+make install
+cd "$wd"
