@@ -5,7 +5,7 @@ apt-get install -y apt-file
 apt-file update
 
 # standard tools
-apt-get install -y tree flip vim git subversion curl wget openjdk-7-jdk libcurl4-openssl-dev
+apt-get install -y tree flip vim git subversion curl wget openjdk-7-jdk libcurl4-openssl-dev htop
 apt-get -y -f install
 
 # nodejs
@@ -15,7 +15,7 @@ apt-get -y -f install
 
 # R
 apt-key adv --keyserver keys.gnupg.net --recv-key 381BA480
-echo "deb http://cran.rstudio.com/bin/linux/debian wheezy-cran3/" > /etc/apt/sources.list.d/cran.list
+echo "deb http://cran.rstudio.com/bin/linux/debian jessie-cran3/" > /etc/apt/sources.list.d/cran.list
 apt-get update
 aptitude install -y r-base-core
 apt-get -y -f install
@@ -33,6 +33,10 @@ dpkg -i google-chrome-*.deb
 apt-get install -y -f
 cd -
 
+# docker
+apt-get install -y docker.io
+apt-get install -y -f
+
 # ag
 apt-get install -y automake pkg-config libpcre3-dev zlib1g-dev liblzma-dev
 apt-get install -y -f
@@ -43,3 +47,5 @@ cd the_silver_searcher
 ./build.sh
 make install
 cd "$wd"
+
+
